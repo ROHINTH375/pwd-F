@@ -8,7 +8,7 @@ const RequestReset = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/request-password-reset', { email });
+      const res = await axios.post('https://pwd-b-3.onrender.com/api/auth/request-password-reset', { email });
       setMessage(res.data.message);
     } catch (error) {
       setMessage(error.response.data.message || 'Error occurred');

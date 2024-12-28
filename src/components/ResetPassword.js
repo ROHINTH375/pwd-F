@@ -8,7 +8,7 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/reset-password", {
+      const response = await fetch("https://pwd-b-3.onrender.com/api/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
