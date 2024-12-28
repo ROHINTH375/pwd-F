@@ -18,10 +18,10 @@ const AuthPage = () => {
   const handleLoginOrSignup = async (e) => {
     e.preventDefault();
     const url = isSignup
-      ? "http://localhost:5000/api/signup"
+      ? "https://pwd-b-3.onrender.com/api/signup"
       : isOTPLogin
-      ? "http://localhost:5000/api/login-otp"
-      : "http://localhost:5000/api/login";
+      ? "https://pwd-b-3.onrender.com/api/login-otp"
+      : "https://pwd-b-3.onrender.com/api/login";
 
     const body = isSignup
       ? { email, password, mobile }
@@ -53,7 +53,7 @@ const AuthPage = () => {
   const handleGenerateOTP = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/generate-otp", {
+      const response = await fetch("https://pwd-b-3.onrender.com/api/generate-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mobile }),
